@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilterCell" id="gTV-IL-0wX" customClass="FilterCell" customModule="FilterDesign" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="156" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IXP-tb-tfL">
+                        <rect key="frame" x="8" y="5" width="140" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlL-wS-c66">
+                                <rect key="frame" x="16" y="10.5" width="86" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdz-aH-XHW">
+                                <rect key="frame" x="107" y="6" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="28" id="Cer-t3-HiD"/>
+                                    <constraint firstAttribute="height" constant="28" id="ME2-qa-c0r"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.24705882352941178" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system"/>
+                                <connections>
+                                    <action selector="deleteAction" destination="gTV-IL-0wX" eventType="touchUpInside" id="H2P-I8-vtt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="BJt-ny-1hf"/>
+                            <constraint firstItem="gdz-aH-XHW" firstAttribute="leading" secondItem="jlL-wS-c66" secondAttribute="trailing" constant="5" id="Dhb-AH-mxc"/>
+                            <constraint firstAttribute="trailing" secondItem="gdz-aH-XHW" secondAttribute="trailing" constant="5" id="EZM-AC-CxX"/>
+                            <constraint firstItem="jlL-wS-c66" firstAttribute="centerY" secondItem="IXP-tb-tfL" secondAttribute="centerY" id="bwW-qb-tKG"/>
+                            <constraint firstItem="jlL-wS-c66" firstAttribute="leading" secondItem="IXP-tb-tfL" secondAttribute="leading" constant="16" id="rEs-fE-LmE"/>
+                            <constraint firstItem="gdz-aH-XHW" firstAttribute="centerY" secondItem="IXP-tb-tfL" secondAttribute="centerY" id="ySP-hf-A0c"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="IXP-tb-tfL" secondAttribute="bottom" constant="5" id="3Ux-Yb-N6m"/>
+                <constraint firstItem="IXP-tb-tfL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="gbb-b7-Ggx"/>
+                <constraint firstAttribute="trailing" secondItem="IXP-tb-tfL" secondAttribute="trailing" constant="8" id="sOj-Ax-mp0"/>
+                <constraint firstItem="IXP-tb-tfL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="zZX-yX-I12"/>
+            </constraints>
+            <size key="customSize" width="156" height="64"/>
+            <connections>
+                <outlet property="contentText" destination="jlL-wS-c66" id="eHk-wZ-DGy"/>
+                <outlet property="filterView" destination="IXP-tb-tfL" id="VlB-eP-jpg"/>
+            </connections>
+            <point key="canvasLocation" x="192.75362318840581" y="29.464285714285712"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
